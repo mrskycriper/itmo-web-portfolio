@@ -22,4 +22,44 @@
             <xsl:value-of select="current()"/>
         </xsl:attribute>
     </xsl:template>
+    <xsl:template match="эллипс">
+        <ellipse>
+            <xsl:apply-templates select="@*|node()"/>
+        </ellipse>
+    </xsl:template>
+    <xsl:template match="эллипс/@заливка">
+        <xsl:attribute name="fill">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="эллипс/@ободок">
+        <xsl:attribute name="stroke">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="эллипс/@ширина-ободка">
+        <xsl:attribute name="stroke-width">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="эллипс/@cx">
+        <xsl:attribute name="cx">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="эллипс/@cy">
+        <xsl:attribute name="cy">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="эллипс/@rx">
+        <xsl:attribute name="rx">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="эллипс/@ry">
+        <xsl:attribute name="ry">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
+    </xsl:template>
 </xsl:stylesheet>
