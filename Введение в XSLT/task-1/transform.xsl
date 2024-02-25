@@ -17,12 +17,12 @@
         </xsl:template>
         <xsl:template match="операнд">
             <mi>
-                <xsl:apply-templates />
+                <xsl:value-of select="current()" />
             </mi>
         </xsl:template>
         <xsl:template match="оператор">
             <mo>
-                <xsl:apply-templates />
+                <xsl:value-of select="current()" />
             </mo>
         </xsl:template>
         <xsl:template match="корень">
