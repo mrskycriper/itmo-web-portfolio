@@ -9,15 +9,17 @@
     </xsl:template>
     <xsl:template match="графика">
         <svg xmlns="http://www.w3.org/2000/svg">
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="@*|node()"/>
         </svg>
     </xsl:template>
     <xsl:template match="графика/@ширина">
-        <xsl:attribute name="width" select="current()"></xsl:attribute>
+        <xsl:attribute name="width">
+            <xsl:value-of select="current()"/>
+        </xsl:attribute>
     </xsl:template>
     <xsl:template match="графика/@высота">
         <xsl:attribute name="height">
-            <xsl:value-of select="current()" />
+            <xsl:value-of select="current()"/>
         </xsl:attribute>
     </xsl:template>
 </xsl:stylesheet>
